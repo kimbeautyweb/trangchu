@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Beauty - Đào Tạo Spa Chuyên Nghiệp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#708238', // Xanh mạ/rêu chủ đạo
+                            darkgreen: '#4D5A23',
+                            cream: '#F7F5F0',  // Kem ngà nền
+                            card: '#EFECE6',
+                            text: '#2D3748'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Tùy chỉnh thanh cuộn cho băng chuyền khóa học */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-text font-sans antialiased selection:bg-brand-green selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur border-b border-brand-green/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Bước 1: Tên & Logo Kim Beauty -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-xl shadow-md">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-brand-darkgreen">KIM BEAUTY</span>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-gray-700">
+                <a href="#trang-chu" class="hover:text-brand-green transition">Trang chủ</a>
+                <a href="#tai-sao" class="hover:text-brand-green transition">Tại sao chọn Kim Beauty</a>
+                <a href="#khoa-hoc" class="hover:text-brand-green transition">Khóa học HOT</a>
+                <a href="#gia-tri" class="hover:text-brand-green transition">Kết quả nhận được</a>
+                <a href="#lien-he" class="hover:text-brand-green transition">Liên hệ</a>
+            </nav>
+
+            <a href="#lien-he" class="bg-brand-green hover:bg-brand-darkgreen text-white px-5 py-2.5 rounded-full font-medium transition shadow-sm">
+                Đăng ký tư vấn
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="trang-chu" class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-block bg-brand-green/10 text-brand-darkgreen px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                    HỌC VIỆN ĐÀO TẠO SPA CHUYÊN NGHIỆP
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-darkgreen leading-tight">
+                    KHÓA HỌC CHĂM SÓC DA & TRỊ LIỆU
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Chương trình đào tạo chuẩn thực chiến, nâng cao tay nghề và tư duy quản lý Spa, hỗ trợ đồng hành trọn đời cùng học viên.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#lien-he" class="bg-brand-green hover:bg-brand-darkgreen text-white px-8 py-3.5 rounded-full font-semibold text-lg transition shadow-md">
+                        ĐĂNG KÝ NGAY
+                    </a>
+                    <a href="#khoa-hoc" class="border-2 border-brand-green text-brand-darkgreen hover:bg-brand-green hover:text-white px-8 py-3.5 rounded-full font-semibold text-lg transition">
+                        Xem các khóa học
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="w-full h-[400px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-gray-200">
+                    <img id="hero-image" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" 
+                         alt="Kim Beauty Spa Training" 
+                         class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/30">
+                        <p class="font-semibold text-sm">✦ Hình ảnh thực tế từ lớp học Kim Beauty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 3: TẠI SAO LẠI CHỌN CHÚNG TÔI? -->
+    <section id="tai-sao" class="py-16 bg-white/60 border-y border-brand-green/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-brand-darkgreen uppercase tracking-wide">Tại sao lại chọn chúng tôi?</h2>
+                <p class="text-gray-600 mt-2">Kim Beauty mang lại giá trị đào tạo thực chiến và khác biệt cho học viên & chủ Spa</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Giáo viên tâm huyết</h3>
+                    <p class="text-gray-600 leading-relaxed">Có nhiều kinh nghiệm trong đào tạo, setup và triển khai quy trình chuẩn tại các Spa lớn, nhỏ.</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Thực hành trọng tâm</h3>
+                    <p class="text-gray-600 leading-relaxed">Dạy đúng trọng tâm của khóa học, tập trung rèn luyện tay nghề thực tế, không lan man lý thuyết dài dòng.</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Đào tạo Online linh hoạt</h3>
+                    <p class="text-gray-600 leading-relaxed">Đào tạo Online bằng các tài liệu thực chiến, bộ quy trình và kinh nghiệm đúc kết thực tế.</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Hỗ trợ việc làm</h3>
+                    <p class="text-gray-600 leading-relaxed">Cam kết giới thiệu và hỗ trợ kết nối công việc cho học viên ngay sau khi kết thúc khóa học.</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Giáo trình chuẩn</h3>
+                    <p class="text-gray-600 leading-relaxed">Giáo trình liên tục update và cập nhật liên tục theo công nghệ.</p>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-2xl hover:shadow-lg transition border border-brand-green/10 flex flex-col items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-green text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-darkgreen mb-3">Đồng hành cùng chủ SPA</h3>
+                    <p class="text-gray-600 leading-relaxed">Hỗ trợ setup, đào tạo nhân viên, kĩ năng chuyên ngành.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 4: CÁC KHÓA HỌC HOT (Băng chuyền slider) -->
+    <section id="khoa-hoc" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+            <div>
+                <h2 class="text-3xl font-bold text-brand-darkgreen uppercase">Các Khóa Học HOT</h2>
+                <p class="text-gray-600 mt-2">Chương trình đào tạo đa dạng từ cơ bản đến nâng cao</p>
+            </div>
+            <div class="flex gap-3 mt-4 md:mt-0">
+                <button onclick="scrollCarousel(-320)" class="w-12 h-12 rounded-full border border-brand-green text-brand-darkgreen hover:bg-brand-green hover:text-white transition flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="scrollCarousel(320)" class="w-12 h-12 rounded-full border border-brand-green text-brand-darkgreen hover:bg-brand-green hover:text-white transition flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="course-carousel" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar pb-6">
+            <div class="min-w-[280px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md border border-brand-green/10 snap-start flex-shrink-0">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Facial" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">Khóa Chuyên Sâu</span>
+                    <h3 class="text-lg font-bold text-brand-darkgreen mt-3 mb-2">Kỹ Thuật Facial & Chăm Sóc Da</h3>
+                    <p class="text-gray-600 text-sm mb-4">Nắm vững kiến thức về cấu trúc da, soi da và kỹ thuật chăm sóc da chuẩn Y khoa.</p>
+                    <a href="#lien-he" class="block text-center w-full py-2.5 rounded-xl border border-brand-green text-brand-darkgreen font-semibold hover:bg-brand-green hover:text-white transition">Xem Chi Tiết</a>
+                </div>
+            </div>
+
+            <div class="min-w-[280px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md border border-brand-green/10 snap-start flex-shrink-0">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Massage" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">Khóa Bán Chạy</span>
+                    <h3 class="text-lg font-bold text-brand-darkgreen mt-3 mb-2">Massage Dưỡng Sinh & Trị Liệu</h3>
+                    <p class="text-gray-600 text-sm mb-4">Kỹ thuật massage cổ vai gáy, bấm huyệt lưu thông khí huyết và thư giãn sâu.</p>
+                    <a href="#lien-he" class="block text-center w-full py-2.5 rounded-xl border border-brand-green text-brand-darkgreen font-semibold hover:bg-brand-green hover:text-white transition">Xem Chi Tiết</a>
+                </div>
+            </div>
+
+            <div class="min-w-[280px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md border border-brand-green/10 snap-start flex-shrink-0">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1512290900673-7002422115be?auto=format&fit=crop&w=600&q=80" alt="Trị liệu công nghệ cao" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">Công Nghệ Cao</span>
+                    <h3 class="text-lg font-bold text-brand-darkgreen mt-3 mb-2">Điều Trị Da Công Nghệ Cao</h3>
+                    <p class="text-gray-600 text-sm mb-4">Làm chủ các máy móc hiện đại: Laser, Nám, Mụn, Tàn nhang, Tái tạo bề mặt da.</p>
+                    <a href="#lien-he" class="block text-center w-full py-2.5 rounded-xl border border-brand-green text-brand-darkgreen font-semibold hover:bg-brand-green hover:text-white transition">Xem Chi Tiết</a>
+                </div>
+            </div>
+
+            <div class="min-w-[280px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md border border-brand-green/10 snap-start flex-shrink-0">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Setup Spa" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold text-brand-green bg-brand-green/10 px-3 py-1 rounded-full">Dành Cho Chủ Spa</span>
+                    <h3 class="text-lg font-bold text-brand-darkgreen mt-3 mb-2">Setup & Quản Lý Spa Thực Chiến</h3>
+                    <p class="text-gray-600 text-sm mb-4">Xây dựng quy trình vận hành, đào tạo nhân sự và chiến lược tăng trưởng doanh số.</p>
+                    <a href="#lien-he" class="block text-center w-full py-2.5 rounded-xl border border-brand-green text-brand-darkgreen font-semibold hover:bg-brand-green hover:text-white transition">Xem Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 5: KINH NGHIỆM SAU KHÓA HỌC -->
+    <section id="gia-tri" class="py-16 bg-brand-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold uppercase tracking-wide">Giá Trị Nhận Được Sau Khóa Học</h2>
+                <p class="text-white/80 mt-2">Kim Beauty cam kết chuẩn đầu ra toàn diện cho mọi học viên</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-brand-green mx-auto flex items-center justify-center text-xl font-bold mb-4 shadow">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Thành Thạo Kỹ Năng</h3>
+                    <p class="text-white/80 text-sm">Thành thạo tất cả các kỹ năng chuyên môn trong nghề Spa trị liệu.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-brand-green mx-auto flex items-center justify-center text-xl font-bold mb-4 shadow">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Nâng Cao Tay Nghề</h3>
+                    <p class="text-white/80 text-sm">Tư duy nghề nghiệp chuẩn chỉnh và tay nghề thực hành vững vàng.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-brand-green mx-auto flex items-center justify-center text-xl font-bold mb-4 shadow">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Kỹ Năng Lãnh Đạo</h3>
+                    <p class="text-white/80 text-sm">Trang bị thêm kỹ năng lãnh đạo, quản lý và phong cách làm việc chuyên nghiệp.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl text-center">
+                    <div class="w-12 h-12 rounded-full bg-white text-brand-green mx-auto flex items-center justify-center text-xl font-bold mb-4 shadow">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tăng Doanh Số Spa</h3>
+                    <p class="text-white/80 text-sm">Nắm vững các phương pháp chốt sale và chiến lược bứt phá doanh thu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BƯỚC 6: THÔNG TIN LIÊN HỆ & ĐĂNG KÝ -->
+    <section id="lien-he" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-brand-card rounded-3xl p-8 sm:p-12 border border-brand-green/20 grid lg:grid-cols-2 gap-12">
+            
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-brand-darkgreen uppercase">Thông Tin Liên Hệ</h2>
+                <p class="text-gray-600">Liên hệ ngay với Kim Beauty để nhận lộ trình tư vấn chi tiết và ưu đãi khóa học tốt nhất.</p>
+
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-brand-darkgreen">Địa chỉ học viện:</h4>
+                            <p class="text-gray-600">Số 1, ngõ 328 đường Tây Mỗ, phường Tây Mỗ, Hà Nội</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-brand-darkgreen">Điện thoại liên hệ:</h4>
+                            <p class="text-gray-600 font-medium">077.770.1993 – 0949.410.999</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Đăng ký tư vấn -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-brand-green/10">
+                <h3 class="text-2xl font-bold text-brand-darkgreen mb-6 text-center">ĐĂNG KÝ TƯ VẤN KHÓA HỌC</h3>
+                
+                <form id="registrationForm" action="https://formsubmit.co/kimbeauty365@gmail.com" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <!-- Cấu hình ẩn FormSubmit -->
+                    <input type="hidden" name="_subject" value="[KIM BEAUTY WEBSITE] Có học viên đăng ký tư vấn mới!">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Tự động điều hướng về lại màn hình trang chủ kèm tham số đã đăng ký -->
+                    <input type="hidden" id="nextUrl" name="_next" value="">
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Họ và tên của bạn *</label>
+                        <input type="text" name="Họ_và_Tên" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-green">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại *</label>
+                        <input type="tel" name="Số_Điện_Thoại" required placeholder="0901234567" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-green">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Khóa học bạn quan tâm</label>
+                        <select name="Khóa_Học_Quan_Tâm" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brand-green">
+                            <option value="Chăm sóc da & Trị liệu cơ bản">Chăm sóc da & Trị liệu cơ bản</option>
+                            <option value="Massage Dưỡng sinh">Massage Dưỡng sinh</option>
+                            <option value="Điều trị da Công nghệ cao">Điều trị da Công nghệ cao</option>
+                            <option value="Tư vấn Setup & Quản lý Spa">Tư vấn Setup & Quản lý Spa</option>
+                            <option value="Khóa đào tạo Online">Khóa đào tạo Online</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-green hover:bg-brand-darkgreen text-white font-bold py-3.5 rounded-xl transition shadow-md">
+                        GỬI ĐĂNG KÝ NGAY
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darkgreen text-white py-8 border-t border-white/10 text-center text-sm">
+        <p>© 2026 KIM BEAUTY - Đào Tạo Spa Chuyên Nghiệp. All rights reserved.</p>
+    </footer>
+
+    <!-- Script điều khiển Băng chuyền & Thông báo đăng ký -->
+    <script>
+        // Điều hướng băng chuyền khóa học
+        function scrollCarousel(distance) {
+            const carousel = document.getElementById('course-carousel');
+            carousel.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+
+        // Tự động gán đường dẫn trang chủ hiện tại vào input _next
+        document.getElementById('nextUrl').value = window.location.href.split('#')[0] + '?status=success#trang-chu';
+
+        // Xử lý sự kiện sau khi form gửi và tải lại trang chủ
+        function handleFormSubmit(event) {
+            alert('Cảm ơn bạn đã đăng kí khoá học!');
+        }
+
+        // Kiểm tra xem người dùng vừa được chuyển hướng về trang chủ sau khi đăng ký thành công không
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('status') === 'success') {
+                alert('Cảm ơn bạn đã đăng kí khoá học!');
+                // Dọn dẹp URL trở lại bình thường
+                window.history.replaceState({}, document.title, window.location.pathname + '#trang-chu');
+            }
+        });
+    </script>
+</body>
+</html>
