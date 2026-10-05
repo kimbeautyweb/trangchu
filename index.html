@@ -14,8 +14,8 @@
                         brand: {
                             green: '#708238', // Xanh mạ/rêu chủ đạo
                             darkgreen: '#4D5A23',
-                            cream: '#F7F5F0',  // Kem ngà nền
-                            card: '#EFECE6',
+                            cream: '#F7F5F0',  // Kem ngà nền chính
+                            card: '#EFECE6',   // Kem đậm hơn cho thẻ/khung
                             text: '#2D3748'
                         }
                     }
@@ -62,8 +62,8 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="trang-chu" class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- HERO SECTION (TRANG CHỦ) -->
+    <section id="trang-chu" class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-brand-cream">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <div class="inline-block bg-brand-green/10 text-brand-darkgreen px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
@@ -85,10 +85,10 @@
                 </div>
             </div>
 
-            <!-- Khung ảnh chuẩn mẫu giao diện cũ, tự động điều chỉnh ảnh lớn -->
+            <!-- Khung ảnh chuẩn mẫu giao diện -->
             <div class="relative">
-                <div class="w-full h-[400px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-gray-200">
-                    <img id="hero-image" src="hạnh.jpg" 
+                <div class="w-full h-[400px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-brand-card">
+                    <img id="hero-image" src="hanh.jpg" 
                          alt="Kim Beauty - Đào tạo Spa chuyên nghiệp" 
                          class="w-full h-full object-cover object-center block">
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 sm:p-6">
@@ -100,7 +100,7 @@
     </section>
 
     <!-- TẠI SAO LẠI CHỌN CHÚNG TÔI? -->
-    <section id="tai-sao" class="py-16 bg-white/60 border-y border-brand-green/10">
+    <section id="tai-sao" class="py-16 bg-white/70 border-y border-brand-green/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-3xl font-bold text-brand-darkgreen uppercase tracking-wide">Tại sao lại chọn chúng tôi?</h2>
@@ -160,7 +160,7 @@
     </section>
 
     <!-- CÁC KHÓA HỌC HOT (Băng chuyền slider) -->
-    <section id="khoa-hoc" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="khoa-hoc" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-brand-cream">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div>
                 <h2 class="text-3xl font-bold text-brand-darkgreen uppercase">Các Khóa Học HOT</h2>
@@ -271,8 +271,8 @@
         </div>
     </section>
 
-    <!-- THÔNG TIN LIÊN HỆ & ĐĂNG KÝ -->
-    <section id="lien-he" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- THÔNG TIN LIÊN HỆ & ĐĂNG KÝ (ĐÃ THÊM MỤC EMAIL) -->
+    <section id="lien-he" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-brand-cream">
         <div class="bg-brand-card rounded-3xl p-8 sm:p-12 border border-brand-green/20 grid lg:grid-cols-2 gap-12">
             
             <div class="space-y-6">
@@ -281,7 +281,7 @@
 
                 <div class="space-y-4 pt-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div>
@@ -291,12 +291,23 @@
                     </div>
 
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1">
+                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div>
                             <h4 class="font-semibold text-brand-darkgreen">Điện thoại liên hệ:</h4>
                             <p class="text-gray-600 font-medium">077.770.1993 – 0949.410.999</p>
+                        </div>
+                    </div>
+
+                    <!-- MỤC EMAIL MỚI THÊM VÀO ĐÂY -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-brand-darkgreen">Email hỗ trợ:</h4>
+                            <p class="text-gray-600 font-medium">kimbeauty365@gmail.com</p>
                         </div>
                     </div>
                 </div>
