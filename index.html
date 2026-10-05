@@ -41,7 +41,7 @@
     <!-- HEADER / NAVIGATION -->
     <header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur border-b border-brand-green/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Bước 1: Tên & Logo Kim Beauty (Đã cập nhật dùng logo.jpg) -->
+            <!-- Tên & Logo Kim Beauty -->
             <div class="flex items-center gap-3">
                 <img src="logo.jpg" alt="Logo Kim Beauty" class="w-11 h-11 rounded-full object-cover shadow-sm border border-brand-green/20">
                 <span class="text-2xl font-bold tracking-tight text-brand-darkgreen">KIM BEAUTY</span>
@@ -62,7 +62,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (MỤC ĐẦU TIÊN - ĐÃ CẬP NHẬT ẢNH HANH.JPG & NỘI DUNG MỚI) -->
     <section id="trang-chu" class="py-12 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
@@ -85,21 +85,22 @@
                 </div>
             </div>
 
+            <!-- Ảnh hanh.jpg và dòng chữ chú thích mới -->
             <div class="relative">
                 <div class="w-full h-[400px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative bg-gray-200">
-                    <img id="hero-image" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" 
-                         alt="Kim Beauty Spa Training" 
+                    <img id="hero-image" src="hanh.jpg" 
+                         alt="Kim Beauty - Đào tạo Spa chuyên nghiệp" 
                          class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
                     <div class="absolute bottom-6 left-6 right-6 text-white bg-white/20 backdrop-blur-md p-4 rounded-2xl border border-white/30">
-                        <p class="font-semibold text-sm">✦ Hình ảnh thực tế từ lớp học Kim Beauty</p>
+                        <p class="font-semibold text-sm">✦ Kim Beauty - Đào tạo Spa chuyên nghiệp</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BƯỚC 3: TẠI SAO LẠI CHỌN CHÚNG TÔI? -->
+    <!-- TẠI SAO LẠI CHỌN CHÚNG TÔI? -->
     <section id="tai-sao" class="py-16 bg-white/60 border-y border-brand-green/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
@@ -159,7 +160,7 @@
         </div>
     </section>
 
-    <!-- BƯỚC 4: CÁC KHÓA HỌC HOT (Băng chuyền slider) -->
+    <!-- CÁC KHÓA HỌC HOT (Băng chuyền slider) -->
     <section id="khoa-hoc" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div>
@@ -227,7 +228,7 @@
         </div>
     </section>
 
-    <!-- BƯỚC 5: KINH NGHIỆM SAU KHÓA HỌC -->
+    <!-- KINHN NGHIỆM SAU KHÓA HỌC -->
     <section id="gia-tri" class="py-16 bg-brand-green text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
@@ -271,7 +272,7 @@
         </div>
     </section>
 
-    <!-- BƯỚC 6: THÔNG TIN LIÊN HỆ & ĐĂNG KÝ -->
+    <!-- THÔNG TIN LIÊN HỆ & ĐĂNG KÝ -->
     <section id="lien-he" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-brand-card rounded-3xl p-8 sm:p-12 border border-brand-green/20 grid lg:grid-cols-2 gap-12">
             
@@ -311,7 +312,6 @@
                     <input type="hidden" name="_subject" value="[KIM BEAUTY WEBSITE] Có học viên đăng ký tư vấn mới!">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Tự động điều hướng về lại màn hình trang chủ kèm tham số đã đăng ký -->
                     <input type="hidden" id="nextUrl" name="_next" value="">
 
                     <div>
@@ -351,26 +351,21 @@
 
     <!-- Script điều khiển Băng chuyền & Thông báo đăng ký -->
     <script>
-        // Điều hướng băng chuyền khóa học
         function scrollCarousel(distance) {
             const carousel = document.getElementById('course-carousel');
             carousel.scrollBy({ left: distance, behavior: 'smooth' });
         }
 
-        // Tự động gán đường dẫn trang chủ hiện tại vào input _next
         document.getElementById('nextUrl').value = window.location.href.split('#')[0] + '?status=success#trang-chu';
 
-        // Xử lý sự kiện sau khi form gửi
         function handleFormSubmit(event) {
             alert('Cảm ơn bạn đã đăng kí khoá học!');
         }
 
-        // Kiểm tra xem người dùng vừa được chuyển hướng về trang chủ sau khi đăng ký thành công không
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('status') === 'success') {
                 alert('Cảm ơn bạn đã đăng kí khoá học!');
-                // Dọn dẹp URL trở lại bình thường
                 window.history.replaceState({}, document.title, window.location.pathname + '#trang-chu');
             }
         });
